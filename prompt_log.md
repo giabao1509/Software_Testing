@@ -1518,6 +1518,94 @@ Motorola Solutions
 Đây là vị trí QA Automation chuyên sâu trong lĩnh vực AI và Computer Vision, nơi QA không chỉ kiểm thử phần mềm mà còn đánh giá chất lượng của các thuật toán AI được triển khai trên camera giám sát thông minh. AI không đóng vai trò là công cụ hỗ trợ mà chính là đối tượng cần được kiểm thử và xác thực. Điều này cho thấy nhu cầu ngày càng tăng đối với các kỹ sư QA có khả năng làm việc với Machine Learning, Computer Vision, dữ liệu video và các hệ thống AI vận hành trên môi trường thực tế.
 
 ```
+
+### Prompt 10
+**AI tool:** 
+Chat GPT
+
+**Thời gian:**
+04/06/2026 4:27 PM
+
+**Prompt:**
+```
+Vẽ QA/QC mindmap dưới dạng mermaid 
+```
+**AI output:**
+```
+Nếu mục tiêu là **mindmap đơn giản, dễ render trên Mermaid Live**, bạn có thể dùng cấu trúc sau:
+
+
+mindmap
+  root((QA / QC))
+
+    QA
+      Process-oriented
+      Prevention
+      Standards
+      Procedures
+      Audits
+      Process Improvement
+
+    QC
+      Product-oriented
+      Detection
+      Testing
+        Static Testing
+        Dynamic Testing
+      Inspection
+      Defect Management
+
+    Goal
+      Product Quality
+      Customer Satisfaction
+
+
+Hoặc nếu muốn thể hiện rõ sự khác biệt giữa QA và QC:
+
+
+mindmap
+  root((QA / QC))
+
+    QA
+      Proactive
+      Focus on Process
+      Prevent Defects
+      Standards
+      Audits
+      Process Improvement
+
+    QC
+      Reactive
+      Focus on Product
+      Find Defects
+      Testing
+      Inspection
+      Defect Tracking
+
+    Common Goal
+      Quality Product
+      Customer Satisfaction
+
+
+Nếu Mermaid Live báo lỗi, hãy kiểm tra:
+
+* Chọn loại diagram là **Mindmap**.
+* Chỉ dán phần bắt đầu từ `mindmap`, không dán dấu `mermaid và `.
+
+Ví dụ đúng:
+
+
+mindmap
+  root((QA / QC))
+    QA
+      Process
+    QC
+      Product
+
+
+Ví dụ này tương thích với Mermaid Live hiện tại.
+
+```
 ---
 
 ## Prompt để thực hiện requirement 2:
