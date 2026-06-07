@@ -1354,3 +1354,15 @@ Tóm lại, AI là một công cụ rất hữu ích trong quá trình hỗ tr�
 ## 2. Báo cáo kiểm toán AI (AI Audit Report): [[AI-02] - FIT@HCMUS - AI Audit Report_En.md](./[AI-02]%20-%20FIT@HCMUS%20-%20AI%20Audit%20Report_En.md)
 ## 3. Biểu mẫu công bố sử dụng AI (AI Disclosure Form): [[AI-03] - FIT@HCMUS - AI Disclosure Form_En.md](./[AI-03]%20-%20FIT@HCMUS%20-%20AI%20Disclosure%20Form_En.md)
 ## 4. Danh sách kiểm tra quyền riêng tư AI (AI Privacy Checklist): [[AI-05] - FIT@HCMUS - AI Privacy Checklist_En.md](./[AI-05]%20-%20FIT@HCMUS%20-%20AI%20Privacy%20Checklist_En.md)
+
+
+# Tự đánh giá
+| No. | Criteria                                                | Grade | Self-Assessed |
+| :-- | :------------------------------------------------------ | :---- | :------------ |
+| 1   | Job Market 2026 (10 jobs × 3 pts + AI Impact)           | 40    | 40            |
+| 2   | Software Defects (2022–2026, 20 defects)                | 20    | 20            |
+| 3   | Physical-product test design (15 TCs + 5 videos)        | 25    | 25            |
+| 4   | AI Audit Report (5-section) attached                    | 8     | 8             |
+| 5   | AI Critique (200–300 words + AI-03 Disclosure attached) | 3     | 3             |
+| 6   | AI 05 Checklist (signed + anti-cheat artifacts)         | 4     | 4             |
+|     | Total                                                   | 100   |               |
