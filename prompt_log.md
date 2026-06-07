@@ -3842,3 +3842,61 @@ AI khẳng định rằng CVE-2024-5806 đang bị khai thác tích cực ngay s
 Đây là kiểu lỗi rất phù hợp với yêu cầu môn học vì nó thể hiện AI đã **khẳng định mạnh hơn những gì nguồn thực sự nói**.
 
 ```
+
+## Prompt để thực hiện requirement 3:
+
+### Prompt 01
+**AI tool:** 
+Chat GPT
+
+**Thời gian:**
+05/06/2026 2:40 PM
+
+**Prompt:**
+```
+Thiết kế cho tôi 15 test case cho quạt máy bàn theo dạng bảng có 
+Test Case ID 
+Objective 
+Precondition
+Input 
+Steps 
+Expected Result 
+Actual Result 
+Verdict
+```
+
+**AI output:**
+```
+Dưới đây là **15 test case cho quạt máy bàn** theo đúng format bạn yêu cầu:
+
+---
+
+## 🧪 Test Cases – Quạt máy bàn
+
+| Test Case ID | Objective                          | Precondition            | Input                               | Steps                      | Expected Result                   | Actual Result | Verdict |
+| ------------ | ---------------------------------- | ----------------------- | ----------------------------------- | -------------------------- | --------------------------------- | ------------- | ------- |
+| TC01         | Kiểm tra bật quạt                  | Quạt đã cắm điện        | Nút ON                              | Nhấn nút ON                | Quạt hoạt động                    |               |         |
+| TC02         | Kiểm tra tắt quạt                  | Quạt đang chạy          | Nút OFF                             | Nhấn nút OFF               | Quạt dừng hoàn toàn               |               |         |
+| TC03         | Kiểm tra tốc độ 1                  | Quạt đang bật           | Speed = 1                           | Nhấn speed 1               | Gió yếu                           |               |         |
+| TC04         | Kiểm tra tốc độ 2                  | Quạt đang bật           | Speed = 2                           | Nhấn speed 2               | Gió trung bình                    |               |         |
+| TC05         | Kiểm tra tốc độ 3                  | Quạt đang bật           | Speed = 3                           | Nhấn speed 3               | Gió mạnh                          |               |         |
+| TC06         | Kiểm tra chế độ quay (oscillation) | Quạt đang bật           | Nút xoay                            | Bật chế độ xoay            | Quạt quay trái/phải               |               |         |
+| TC07         | Kiểm tra dừng xoay                 | Quạt đang xoay          | Nút xoay                            | Tắt xoay                   | Quạt dừng hướng cố định           |               |         |
+| TC08         | Kiểm tra độ ồn                     | Quạt đang chạy          | Speed 1–3                           | Nghe trong 1m              | Âm thanh ổn định, không quá ồn    |               |         |
+| TC09         | Kiểm tra độ ổn định                | Quạt đặt trên bàn phẳng | Speed 3                             | Bật quạt                   | Không rung lắc mạnh               |               |         |
+| TC10         | Kiểm tra dây điện                  | Quạt cắm nguồn          | Quan sát dây                        | Kiểm tra dây khi hoạt động | Không nóng bất thường             |               |         |
+| TC11         | Kiểm tra lồng quạt an toàn         | Quạt đang chạy          | Ngón tay gần lồng (giả lập an toàn) | Quan sát khe lồng          | Không chạm cánh quạt              |               |         |
+| TC12         | Kiểm tra khi mất điện              | Quạt đang chạy          | Rút điện                            | Rút phích cắm              | Quạt dừng ngay                    |               |         |
+| TC13         | Kiểm tra khởi động lại             | Quạt vừa tắt            | Nguồn điện                          | Cắm lại và bật             | Quạt hoạt động bình thường        |               |         |
+| TC14         | Kiểm tra nút điều khiển            | Quạt đang bật           | Các nút chức năng                   | Nhấn từng nút              | Phản hồi đúng chức năng           |               |         |
+| TC15         | Kiểm tra hoạt động liên tục        | Quạt chạy lâu           | Speed 2                             | Chạy liên tục 2–3h         | Không nóng máy, hoạt động ổn định |               |         |
+
+---
+
+Nếu bạn muốn, mình có thể:
+
+* Xuất file Excel đúng format “Test Cases / Checklist / Test Summary Report”
+* Hoặc chọn 5 test case để bạn quay video demo luôn
+* Hoặc viết luôn bug report cho quạt này (đúng kiểu bài QA/QC luôn)
+
+```
