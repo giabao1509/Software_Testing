@@ -1214,3 +1214,62 @@ Tháng 6/2024, Progress Software tiết lộ lỗ hổng xác thực nghiêm tr�
 ### AI Hallucination/Bias được phát hiện:
 
 AI khẳng định rằng CVE-2024-5806 "đang bị khai thác tích cực ngay sau khi công bố". Tuy nhiên, các nguồn được trích dẫn chủ yếu xác nhận sự tồn tại của lỗ hổng và mức độ nghiêm trọng của nó, nhưng không đồng nhất trong việc xác nhận hoạt động khai thác thực tế.
+
+# Requirement 3 – Test a Physical Product
+
+## Thông tin thiết bị test:
+* **Hãng sản xuất:** Công ty TNHH SX TM Tấn Đại Phát
+* **Tên Sản Phẩm:** Quạt Bàn B3
+* **Năm:** 2008
+* **Số seri:** No.0613120
+
+Ảnh thiết bị và thẻ sinh viên:
+![](./Device_Photo.jpg)
+## Tổng hợp 15 test cases đã thực hiện:
+| Test Case ID | Objective | Precondition | Input | Steps | Expected Result | Actual Result | Verdict |
+|-------------|------------|--------------|--------|--------|----------------|--------------|---------|
+| TC01 | Kiểm tra bật quạt | Quạt đã cắm điện | Nút 1 | Nhấn nút bật | Quạt khởi động và hoạt động bình thường | Quạt được bật thành công và chạy bình thường | PASS |
+| TC02 | Kiểm tra tắt quạt | Quạt đang chạy | Nút 0 | Nhấn nút tắt | Quạt dừng quay hoàn toàn | Quạt dừng chạy như bình thường | PASS |
+| TC03 | Kiểm thử xung đột đầu vào cơ học (Nhấn 2 nút tốc độ cùng lúc) | Quạt đã cắm điện | 2 nút 1 và 3 | Ấn đồng thời 2 nút tốc độ (ví dụ Speed 1 và Speed 3) | Hệ thống lẫy tự khóa chéo: nẩy cả 2 nút lên (hoặc chỉ giữ lại 1 nút). Không được kẹt giữ cả 2 nút chìm xuống (gây cháy motor). | Cụm nút bấm tự động nẩy cả 2 nút lên | PASS |
+| TC04 | Kiểm thử xung đột vật lý ngoại lực (Cản trở tu năng/Kẹt cơ học) | Quạt đang chạy và đang bật chế độ xoay tu năng | Lực cản vật lý (Dùng tay giữ chặt lồng quạt) | Khi quạt đang xoay dùng tay giữ chặt lồng quạt trong 5 giây | Hệ thống bánh răng tu năng bên trong tự trượt khớp (phát tiếng cạch cạch an toàn) hoặc tự đảo chiều. Thân/đế quạt dưới sàn không bị xoay vặn theo. | Đầu quạt đứng yên nhưng lực truyền làm toàn bộ thân và đế quạt bị xoay vặn theo | FAIL |
+| TC05 | Kiểm thử độ bền khớp gập cổ quạt ở góc ngửa tối đa | Quạt đang tắt | Góc gập cổ quạt hướng lên hết cỡ + Tốc độ lớn nhất | Bẻ cổ quạt ngửa lên góc cao nhất theo nấc thiết kế => Bật quạt ở tốc độ mạnh nhất và bật tu năng xoay | Khớp cổ quạt giữ chặt góc thổi hướng lên trần nhà | Không bị lực gió hoặc lực giật tu năng làm đầu quạt tự động cụp xuống | PASS |
+| TC06 | Kiểm tra chế độ quay (oscillation) | Quạt đang bật | Nút xoay (tu năng) | Kích hoạt chế độ xoay | Cụm đầu quạt đảo hướng trái/phải ổn định | Quạt xoay như bình thường | PASS |
+| TC07 | Kiểm tra dừng xoay | Quạt đang xoay | Nút xoay (tu năng) | Tắt chế độ xoay | Quạt dừng lại và giữ nguyên hướng cố định | Quạt đứng yên không xoay và giữ hướng cố định | PASS |
+| TC08 | Kiểm tra độ ồn | Quạt đang chạy | Tai nghe trong bán kính 1m | Lắng nghe âm thanh khi quạt chạy | Âm thanh gió ổn định, không phát ra tiếng rít hay tiếng va chạm cơ học lạ | Quạt chạy với tiếng ồn lớn do các linh kiện đã cũ và bị hao mòn | FAIL |
+| TC09 | Kiểm tra độ ổn định | Quạt đặt trên bàn/sàn phẳng | Tốc độ lớn nhất | Bật quạt ở mức công suất cao nhất | Thân quạt vững vàng, không bị rung lắc mạnh hay tự di chuyển vị trí | Quạt bị rung lắc do có 1 chân trong 4 chân nâng đỡ thân quạt đã bị mòn khiến quạt không giữ thăng bằng tốt | FAIL |
+| TC10 | Kiểm tra dây điện | Quạt cắm nguồn | Tiếp xúc nhiệt | Sờ nhẹ và quan sát dây điện khi quạt chạy lâu | Dây nguồn và phích cắm không bị nóng lên bất thường, không có mùi khét | Dây nguồn và phích cắm không nóng lên | PASS |
+| TC11 | Kiểm tra lồng quạt an toàn | Quạt đang chạy | Khe hở lồng quạt | Quan sát khoảng cách từ lồng đến cánh quạt | Khe hở lồng quạt đủ nhỏ để cản các vật kích thước lớn, lồng không chạm vào cánh quạt | Khe hở lồng quạt đủ nhỏ để ngón tay người không lọt vào | PASS |
+| TC12 | Kiểm tra khi mất điện | Quạt đang chạy | Hành vi rút nguồn | Rút trực tiếp phích cắm điện ra khỏi ổ | Quạt lập tức mất nguồn và giảm tốc độ rồi dừng lại ngay | Quạt dừng sau khi rút cắm điện | PASS |
+| TC13 | Kiểm tra khởi động lại | Quạt vừa bị rút điện | Cắm lại nguồn điện | Cắm phích điện trở lại ổ cắm | Đối với quạt cơ: Quạt tiếp tục chạy số cũ. Đối với quạt điện tử: Quạt ở trạng thái chờ (Standby) không tự bật bậy. | Quạt tiếp tục chạy số cũ | PASS |
+| TC14 | Kiểm tra nút điều khiển | Quạt đang bật | Các nút chức năng | Nhấn/vặn thử từng nút chức năng trên thân | Các nút bấm có độ nẩy tốt, phản hồi chính xác và không bị kẹt cơ học | Nút 2 có hay bị kẹt do đã cũ | FAIL |
+| TC15 | Kiểm tra hoạt động liên tục | Quạt chạy lâu | Thời gian hoạt động | Để quạt chạy liên tục từ 2–3 giờ | Động cơ không bị quá nhiệt (quá nóng), quạt chạy ổn định không bị giảm tốc | Sau khoảng 1 tiếng chạy thì quạt bị giảm tốc và không mát như lúc đầu, động cơ của quạt cũng khá nóng | FAIL |
+
+## Link video các test cases đã được thực hiện và quay video lại:
+* **TC01:** https://youtube.com/shorts/Ze6VLzby8mw
+* **TC03:** https://youtube.com/shorts/FtmrPN0jjxA
+* **TC04:** https://youtu.be/rAKARYUx6ng
+* **TC06:** https://youtube.com/shorts/LZ_Z3H4zm3M
+* **TC12:** https://youtube.com/shorts/mV8Nh_mtQK4
+
+## Các edge cases đã tìm được:
+
+### Ảnh chứng minh AI đã bỏ sót các edge cases này:
+![](./Artifact/artifact_01/AI_Output_01.png)
+
+![](./Artifact/artifact_01/AI_Output_02.png)
+
+### Giải thích vì sao AI bỏ sót các edge cases:
+
+#### TC03 – Nhấn đồng thời 2 nút tốc độ
+
+AI đã bỏ sót test case này vì thường giả định người dùng sẽ thao tác đúng theo thiết kế, tức chỉ nhấn một nút tốc độ tại một thời điểm. AI tập trung vào các chức năng thông thường nên không xét đến tình huống xung đột cơ học khi nhiều đầu vào được kích hoạt cùng lúc.
+
+#### TC04 – Cản trở cơ cấu xoay tu năng bằng ngoại lực
+
+AI bỏ sót trường hợp này vì đây là tình huống sử dụng bất thường liên quan đến tương tác vật lý với cơ cấu cơ khí bên trong quạt. Các mô hình AI thường tập trung vào hành vi quan sát được từ người dùng hơn là các cơ chế truyền động và các lỗi cơ học phát sinh khi có lực tác động từ bên ngoài.
+
+#### TC05 – Độ bền khớp gập cổ quạt ở góc ngửa tối đa
+
+AI bỏ sót test case này vì thường kiểm tra chức năng điều chỉnh góc quạt ở điều kiện bình thường mà chưa xem xét trạng thái ít khi xuất hiện, tức góc ngửa lớn nhất kết hợp với tốc độ cao nhất và chế độ xoay. Đây là trường hợp edge case liên quan đến độ bền cơ học nên ít xuất hiện trong các bộ test case do AI tự sinh.
+
+
