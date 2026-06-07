@@ -714,13 +714,13 @@ mindmap
       Customer Satisfaction
 ```
 ### Các lỗi tìm được:
-* Thiếu Verification:
+* QC Thiếu Verification:
 Verification là hoạt động quan trọng trong việc đánh giá sự phù hợp của sản phẩm với yêu cầu đã đặt ra.
 
-* Thiếu Process Monitoring:
+* QA Thiếu Process Monitoring:
 QA cần bao gồm hoạt động giám sát quy trình nhằm đảm bảo quy trình được thực hiện đúng và hiệu quả.
 
-* Thiếu Root Cause Analysis:
+* QA Thiếu Root Cause Analysis:
 Phân tích nguyên nhân gốc giúp xác định nguồn gốc của lỗi và hỗ trợ cải tiến chất lượng lâu dài.
 
 Mindmap tham khảo: [12.1: Principles of Quality Assurance (QA) and Quality Control (QC)](https://bio.libretexts.org/Courses/West_Los_Angeles_College/Biotechnology/12:_Quality_Assurance_and_Quality_Control_in_Biotechnology/12.01:_Principles_of_Quality_Assurance_(QA)_and_Quality_Control_(QC))
@@ -1344,4 +1344,13 @@ AI bỏ sót trường hợp này vì đây là tình huống sử dụng bất 
 
 AI bỏ sót test case này vì thường kiểm tra chức năng điều chỉnh góc quạt ở điều kiện bình thường mà chưa xem xét trạng thái ít khi xuất hiện, tức góc ngửa lớn nhất kết hợp với tốc độ cao nhất và chế độ xoay. Đây là trường hợp edge case liên quan đến độ bền cơ học nên ít xuất hiện trong các bộ test case do AI tự sinh.
 
+# AI Critique
+Trong bài HW1 này AI làm khá tốt trong việc đặt nền mống cho các giải pháp của các yêu cầu 1, 2, 3. Với yêu cầu 1, AI làm khá tốt trong việc dịch và tóm tắt các mô tả của công việc cũng như phân tích tầm ảnh hưởng của AI đối với các yêu cầu công việc hiện nay. Trong yêu cầu 2, AI cũng đã tìm 20 lỗi công nghệ rất nhanh và tiếm kiệm thời gian. Tuy nhiên có một số lỗi công nghệ bị thiếu link hoặc link không truy cập được và khi mô tả thì AI có thiên hướng nói quá hoặc suy diễn quá mức một số sự thật chưa được kiểm chứng. Còn với yêu cầu 3, AI làm rất nhanh trong việc tạo 15 test cases và cũng khá hoàn thiện. Tuy vậy, AI vẫn bỏ sót các edge cases mà chỉ phát hiện qua quá trình kiểm thử với thiết bị thật. Ngoài ra, QA/QC mindmap do AI vẽ cũng không đúng hoàn toàn mà vẫn còn thiếu sót.
 
+Tóm lại, AI là một công cụ rất hữu ích trong quá trình hỗ trợ làm bài, nó giúp tiết kiệm rất nhiều thời gian. Tuy nhiên đánh đổi với thời gian làm việc nhanh là độ chính xác không cao. Vì vậy cần con người kiểm tra và chỉnh sửa các lỗi, thiếu sót trong quá trình sinh kết quả.
+
+# Phục lục
+## 1. Nhật ký prompt (Prompt Log): [prompt_log.md](./prompt_log.md)
+## 2. Báo cáo kiểm toán AI (AI Audit Report): [[AI-02] - FIT@HCMUS - AI Audit Report_En.md](./[AI-02]%20-%20FIT@HCMUS%20-%20AI%20Audit%20Report_En.md)
+## 3. Biểu mẫu công bố sử dụng AI (AI Disclosure Form): [[AI-03] - FIT@HCMUS - AI Disclosure Form_En.md](./[AI-03]%20-%20FIT@HCMUS%20-%20AI%20Disclosure%20Form_En.md)
+## 4. Danh sách kiểm tra quyền riêng tư AI (AI Privacy Checklist): [[AI-05] - FIT@HCMUS - AI Privacy Checklist_En.md](./[AI-05]%20-%20FIT@HCMUS%20-%20AI%20Privacy%20Checklist_En.md)
